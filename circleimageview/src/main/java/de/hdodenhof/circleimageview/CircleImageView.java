@@ -134,7 +134,7 @@ public class CircleImageView extends ImageView {
 
     @Override
     public void setScaleType(ScaleType scaleType) {
-        if (scaleType != ScaleType.CENTER_INSIDE || scaleType != ScaleType.CENTER_CROP) {
+        if (scaleType != ScaleType.CENTER_INSIDE && scaleType != ScaleType.CENTER_CROP) {
             throw new IllegalArgumentException(String.format("ScaleType %s not supported. Use ScaleType.CENTER_INSIDE or ScaleType.CENTER_CROP", scaleType));
         } else {
             super.setScaleType(scaleType);
